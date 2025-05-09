@@ -1,0 +1,6 @@
+@use 'mixins' as *;
+
+body {
+  margin: 0;
+  font-family: var(--font-family-one), sans-serif;
+}
