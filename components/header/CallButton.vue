@@ -1,5 +1,5 @@
 <template>
-  <button class="call-button" @click="openModal">
+  <button class="call-button" @click="handleClick">
     Оставить заявку
   </button>
 </template>
@@ -8,9 +8,8 @@
 export default {
   name: 'CallButton',
   methods: {
-    openModal() {
-      // Здесь будет логика открытия модального окна
-      this.$emit('open-form');
+    handleClick() {
+      this.$emit('open-modal');
     }
   }
 }
