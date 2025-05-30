@@ -24,10 +24,18 @@ export default {
 .navigation {
   &__list {
     display: flex;
+    flex-wrap: wrap; /* Добавлено для переноса элементов */
+    align-items: center;
     gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
+    position: relative; /* Для позиционирования в адаптивном режиме */
+  }
+
+  &__item {
+    position: relative;
+    white-space: nowrap; /* Запрещаем перенос текста */
   }
 
   &__link {
@@ -37,6 +45,15 @@ export default {
     font-weight: var(--font-weight-normal);
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  @media (max-width: 640px) {
+    display: none; /* Полностью скрываем навигацию на мобильных */
   }
 }
 </style>
